@@ -4,7 +4,10 @@
   "description": "Nossa biblioteca do curso de JS com TDD na Prática",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint src/*.js",
+    "prepush": "npm run lint",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/MarceloSAnjos/js-tdd-course/issues"
   },
-  "homepage": "https://github.com/MarceloSAnjos/js-tdd-course#readme"
+  "homepage": "https://github.com/MarceloSAnjos/js-tdd-course#readme",
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^5.1.3"
+  }
 }
